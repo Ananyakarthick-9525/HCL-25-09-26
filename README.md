@@ -271,3 +271,246 @@ for i in range(1, n):
 for x in result:
     print(x[0], x[1])
 ```
+---
+
+## 29 September 2026
+
+### Python Code Implementation
+
+#### 1. NumPy-based Assignment
+
+```python
+import numpy as np
+
+scores = np.array([78, 65, 89, 56, 92])
+
+print("Q1 - Student Marks Array")
+print("Array:", scores)
+print("Dimensions:", scores.ndim)
+print("Shape:", scores.shape)
+print("Number of elements:", scores.size)
+print("Data type:", scores.dtype)
+```
+
+#### 2. Calculate Area of a Circle
+
+```python
+import math
+
+radius = float(input())
+
+area = math.pi * radius * radius
+
+print("Area of circle:", round(area, 2))
+```
+
+#### 3. Count Character Frequency in a String
+
+```python
+text = input()
+
+frequency = {}
+
+for char in text:
+    if char != " ":
+        frequency[char] = frequency.get(char, 0) + 1
+
+print("Character frequency:")
+
+for char, count in frequency.items():
+    print(char, ":", count)
+```
+
+#### 4. Calculate Factorial
+
+```python
+number = int(input())
+
+factorial = 1
+
+for value in range(2, number + 1):
+    factorial *= value
+
+print("Factorial:", factorial)
+```
+
+#### 5. Generate Fibonacci Series
+
+```python
+num = int(input())
+
+first, second = 0, 1
+series = []
+
+for _ in range(num):
+    series.append(first)
+    first, second = second, first + second
+
+print("Fibonacci series:", series)
+```
+
+#### 6. Merge Two Dictionaries
+
+```python
+dict_one = {
+    "name": "Priyanka",
+    "age": 20
+}
+
+dict_two = {
+    "course": "AI & DS",
+    "year": 3
+}
+
+merged = {**dict_one, **dict_two}
+
+print("Merged dictionary:", merged)
+```
+
+#### 7. Check Prime Numbers
+
+```python
+n = int(input())
+
+if n < 2:
+    is_prime = False
+else:
+    is_prime = True
+
+    for divisor in range(2, int(n ** 0.5) + 1):
+        if n % divisor == 0:
+            is_prime = False
+            break
+
+if is_prime:
+    print(n, "is a prime number")
+else:
+    print(n, "is not a prime number")
+```
+
+#### 8. Reverse a String
+
+```python
+text = input()
+
+reversed_text = text[::-1]
+
+print("Reversed string:", reversed_text)
+```
+
+#### 9. Remove Duplicate Elements from a List
+
+```python
+numbers = [10, 20, 10, 30, 20, 40, 30]
+
+unique_values = list(dict.fromkeys(numbers))
+
+print("Original list:", numbers)
+print("After removing duplicates:", unique_values)
+```
+
+#### 10. Find the Second-Largest Element
+
+```python
+numbers = [45, 12, 78, 34, 90, 56]
+
+distinct_numbers = sorted(set(numbers), reverse=True)
+
+if len(distinct_numbers) >= 2:
+    print("Second-largest element:", distinct_numbers[1])
+else:
+    print("Second-largest element does not exist")
+```
+
+#### 11. Calculate Square Using Lambda
+
+```python
+number = float(input())
+
+square = lambda x: x * x
+
+print("Square:", square(number))
+```
+
+#### 12. Display Employee Information Using Functions
+
+```python
+def show_employee(name, employee_id, department):
+    print("Employee Name:", name)
+    print("Employee ID:", employee_id)
+    print("Department:", department)
+
+
+show_employee(
+    "Priyanka",
+    "EMP101",
+    "Automation Testing"
+)
+```
+
+#### 13. Perform Mathematical Operations Using Functions
+
+```python
+def addition(a, b):
+    return a + b
+
+
+def subtraction(a, b):
+    return a - b
+
+
+def multiplication(a, b):
+    return a * b
+
+
+def division(a, b):
+    if b == 0:
+        return "Division by zero is not possible"
+    return a / b
+
+
+x = float(input())
+y = float(input())
+
+print("Addition:", addition(x, y))
+print("Subtraction:", subtraction(x, y))
+print("Multiplication:", multiplication(x, y))
+print("Division:", division(x, y))
+```
+
+#### 14. Remove Duplicates Using a Function
+
+```python
+def remove_duplicates(items):
+    result = []
+
+    for item in items:
+        if item not in result:
+            result.append(item)
+
+    return result
+
+
+data = [5, 8, 5, 2, 8, 9, 2, 10]
+
+print("Original data:", data)
+print("Unique data:", remove_duplicates(data))
+```
+
+#### 15. Sort Tuple Elements Using a Function
+
+```python
+def sort_tuple(values):
+    return tuple(sorted(values))
+
+
+data = (45, 12, 78, 23, 9, 56)
+
+print("Original tuple:", data)
+print("Sorted tuple:", sort_tuple(data))
+```
+
+
+
+
+
